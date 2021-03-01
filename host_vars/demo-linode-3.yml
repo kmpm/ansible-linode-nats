@@ -1,6 +1,6 @@
 
 
-wireguard_address: 10.10.10.2
+wireguard_address: 10.10.10.3
 nats_address: "{{ wireguard_address }}"
 nats_ansible_host_group: group_gateway_b
 

@@ -15,7 +15,7 @@
         authorized_keys: "{{ ssh_keys }}"
         tags: "{{item.tags}}"
         state: present
-      register: my_linode
       loop:
         - {label: '1', tags: ['demo', 'wireguard', 'gateway_a']}
         - {label: '2', tags: ['demo', 'wireguard', 'gateway_b']}
+        - {label: '3', tags: ['demo', 'wireguard', 'gateway_b']}

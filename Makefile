@@ -14,7 +14,7 @@ create:
 
 .PHONY: ping
 ping: 
-	ansible -m ping nats_group -i linode.yml -u root
+	ansible -m ping group_demo -i linode.yml -u root
 
 .PHONY: requirements
 requirements:
