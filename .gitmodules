@@ -1,0 +1,6 @@
+[submodule "roles/wireguard"]
+	path = roles/wireguard
+	url = https://github.com/kmpm/ansible-role-wireguard.git
+[submodule "roles/nats"]
+	path = roles/nats
+	url = https://github.com/kmpm/ansible-role-nats.git

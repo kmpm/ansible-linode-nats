@@ -1,0 +1,21 @@
+---
+- name: Create Linode
+  hosts: localhost
+  vars_files:
+      - ./group_vars/demo.yml
+  tasks:
+    - name: Create a new Linode.
+      linode_v4:
+        label: "{{ linode_label }}{{ item.label }}"
+        access_token: "{{ linode_token }}"
+        type: g6-nanode-1
+        region: eu-central
+        image: linode/debian10
+        root_pass: "{{ root_pass }}"
+        authorized_keys: "{{ ssh_keys }}"
+        tags: "{{item.tags}}"
+        state: present
+      register: my_linode
+      loop:
+        - {label: '1', tags: ['demo', 'wireguard', 'gateway_a']}
+        - {label: '2', tags: ['demo', 'wireguard', 'gateway_b']}

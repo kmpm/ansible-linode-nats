@@ -1,0 +1,10 @@
+plugin: community.general.linode
+regions:
+  - eu-central
+keyed_groups:
+  - key: tags
+    prefix: 'group'
+types:
+  - g6-nanode-1
+compose:
+  ansible_host: ipv4[0]

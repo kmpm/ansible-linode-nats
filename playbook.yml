@@ -1,0 +1,9 @@
+- name: "Playbook for nats"
+  hosts: group_demo
+  vars:
+    wireguard_group: group_wireguard
+    # nats_ansible_host_group: nats_group
+  roles:
+    - name: wireguard
+      tags: wireguard
+    - name: nats
