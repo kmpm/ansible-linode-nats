@@ -5,16 +5,10 @@
       - ./vars.yml
       - ./group_vars/demo.yml
   tasks:
-    - name: Create new Linodes
+    - name: Destroy linodes
       linode_v4:
         label: "{{ item.label }}"
         access_token: "{{ linode_token }}"
-        type: g6-nanode-1
-        region: eu-central
-        image: linode/debian10
-        root_pass: "{{ root_pass }}"
-        authorized_keys: "{{ ssh_keys }}"
-        tags: "{{ item.tags }}"
-        state: present
+        state: absent
       with_items: "{{ linodes }}"
         

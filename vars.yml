@@ -1,0 +1,6 @@
+
+
+linodes:
+  - {label: 'demo-linode-1', tags: ['demo', 'wireguard', 'cluster_a']}
+  - {label: 'demo-linode-2', tags: ['demo', 'wireguard', 'cluster_b']}
+  - {label: 'demo-linode-3', tags: ['demo', 'wireguard', 'cluster_b']}

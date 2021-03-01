@@ -70,11 +70,17 @@ ansible-inventory -i linode.yml --graph
 >  |--@ungrouped:
 
 
-# ping the nodes just to check
+# ping the nodes just to check everything is ok so far
 ansible -m ping group_demo -i linode.yml -u root
 
 
 # run the main playbook to set up wireguard + nats between the servers
 ansible-playbook -i linode.yml -u root playbook.yml
 
-``
+```
+
+When you are done you clean up with
+```shell
+# this will destroy all created linodes
+ansible-playbook linode_destroy.yml
+```
